@@ -1,4 +1,4 @@
--- Table creations
+--- Table creations
 CREATE TABLE membership (
   idx BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   type VARCHAR(10) NOT NULL
