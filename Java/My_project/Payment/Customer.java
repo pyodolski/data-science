@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package My_project.Payment;
+=======
+package Payment;
+>>>>>>> db4b19fd9f82448b80dbf8b8abd33cf28da5f09a
 
 import java.awt.event.FocusEvent;
 import java.time.LocalDateTime;
@@ -43,18 +47,29 @@ public class Customer {
                 System.out.println("구매금액은 " + price + "원이며 발생 수수료는 " + (price) * cardtype.getFee() + "원입니다");
                 if (cardtype == Cardtype.CREDIT) {
                     System.out.println("발생 수수료는 " + (price) * cardtype.getTax() + "원 입니다");
+<<<<<<< HEAD
 
 
                 }
                 UseData usedata = new UseData(price, cardtype, LocalDateTime.now());
                 cardCompany.addUseData(this, usedata);
                 useDatas.add(usedata);
+=======
+                    UseData usedata = new UseData(price, cardtype, LocalDateTime.now());
+                    useDatas.add(usedata);
+                    cardCompany.addUseData(this, usedata);
+                }
+>>>>>>> db4b19fd9f82448b80dbf8b8abd33cf28da5f09a
                 break; // 해당 카드를 찾으면 반복문 종료
             }
         }
         if (!cardFound) {
             System.out.println("해당 카드를 소유하고 있지 않습니다.");
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> db4b19fd9f82448b80dbf8b8abd33cf28da5f09a
     }
     // getter
     public String getName() {
@@ -104,6 +119,10 @@ class CardCompany{
     public void addUseData(Customer customer,UseData useData) {
 
         if (useDataList.containsKey(customer)) {
+<<<<<<< HEAD
+=======
+            useDataList.get(customer).add(useData); // 해당 고객이 있으면 Value 값만 추가
+>>>>>>> db4b19fd9f82448b80dbf8b8abd33cf28da5f09a
         } else useDataList.put(customer,customer.getUseDatas()); // 카드회사 고객관리리스트에도 저장
     }
 }
@@ -210,11 +229,14 @@ class Main {
         Customer kavin = new Customer("kavin");
         kavin.addPayment(DaeguBank, Cardtype.CREDIT);
         kavin.buyItem(10000, Cardtype.CREDIT, DaeguBank);
+<<<<<<< HEAD
         kavin.addPayment(DaeguBank, Cardtype.CASH);
         kavin.buyItem(10000, Cardtype.CASH,DaeguBank);
         kavin.buyItem(7777,Cardtype.CREDIT,DaeguBank);
 
 
+=======
+>>>>>>> db4b19fd9f82448b80dbf8b8abd33cf28da5f09a
         DaeguBank.printCustomerCardUsage(kavin);
 
 
