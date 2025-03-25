@@ -1,0 +1,16 @@
+package com.example.sever.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@Builder
+@NoArgsConstructor
+public class ReserveDto {
+    private String name;
+    private int price;
+
+}

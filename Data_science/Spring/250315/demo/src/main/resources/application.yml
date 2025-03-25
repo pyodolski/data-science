@@ -1,0 +1,34 @@
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  application:
+    name: demo  # ?????? ??
+
+  messages:
+    basename: messages
+    encoding: UTF-8
+    thymeleaf:
+      encoding: UTF-8
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root  # MySQL ????
+    password: comep1522w  # MySQL ????
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update  # (??: none, validate, update, create, create-drop)
+    show-sql: true  # ???? SQL ?? ??
+    properties:
+      hibernate:
+        format_sql: true  # SQL? ?? ?? ??
+
+  sql:
+    init:
+      mode: always  # ?????? ?? ? SQL ???? ?? ??
